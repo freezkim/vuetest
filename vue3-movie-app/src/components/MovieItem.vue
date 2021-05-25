@@ -1,5 +1,6 @@
 <template>
-    <div
+    <RouterLink
+        :to="`/movie/${movie.imdbID}`"
         :style="{backgroundImage: `url(${movie.Poster})`}"
         class="movie">
         
@@ -16,7 +17,7 @@
                 {{movie.Title}}
             </div>
         </div>
-    </div>
+    </RouterLink>
 </template>
 
 <script>
@@ -56,7 +57,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
+
 
 .movie {
     $width: 200px;
